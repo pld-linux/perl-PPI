@@ -5,12 +5,12 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	PPI
 Summary:	PPI - parse and manipulate Perl code non-destructively, without using perl itself
-Summary(pl):	PPI - parsowanie i manipulacja kodem Perla w sposób niedestruktywny, bez u¿ycia perla jako takiego
+Summary(pl):	PPI - parsowanie i manipulacja kodem Perla w sposób niedestruktywny, bez u¿ycia Perla jako takiego
 Name:		perl-%{pdir}
 Version:	0.828
 Release:	1
-# note if it is "same as perl"
-License:	(enter GPL/LGPL/BSD/BSD-like/Artistic/other license name here)
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%{pdir}-%{version}.tar.gz
 # Source0-md5:	cece851dda209cb98d3aa1f14c8b47c5
@@ -27,20 +27,31 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Technically, PPI is short for Parse::Perl::Isolated. In aknowledgement
-that someone may some day come up with a valid solution for the
-grammar problem, it was decided to leave the Parse::Perl namespace
-free.
+Technically, PPI is short for Parse::Perl::Isolated. In
+acknowledgement that someone may some day come up with a valid
+solution for the grammar problem, it was decided to leave the
+Parse::Perl namespace free.
 
 The purpose of this parser is not to parse Perl code, but to parse
 Perl documents. In most cases, a single file is valid as both. By
 treating the problem this way, we can parse a single file containing
 Perl source isolated from any other resources, such as the libraries
 upon which the code may depend, and without needing to run an instance
-of perl alongside or inside the the parser (a possible solution for
+of Perl alongside or inside the parser (a possible solution for
 Parse::Perl that is investigated from time to time).
 
-#%description -l pl
+%description -l pl
+Technicznie PPI to skrót od Parse::Perl::Isolated. Ze ¶wiadomo¶ci±, ¿e
+pewnego dnia kto¶ mo¿e poprawnie rozwi±zaæ problem gramatyki,
+zadecydowano o pozostawieniu wolnej przestrzeni nazw Parse::Perl.
+
+Celem tego parsera nie jest parsowanie kodu Perla, ale parsowanie
+dokumentów Perla. W wiêkszo¶ci przypadków jeden plik jest poprawny w
+obu zastosowaniach. Traktuj±c problem w ten sposób, mo¿na
+przeanalizowaæ jeden plik zawieraj±cy ¼ród³o Perla w od³±czeniu od
+wszystkich innych zasobów, takich jak biblioteki, na których polega
+kod, i bez potrzeby uruchamiania instancji Perla obok lub wewn±trz
+parsera (mo¿liwe rozwi±zanie Parse::Perl badane od czasu do czasu).
 
 %prep
 %setup -q -n %{pdir}-%{version}
