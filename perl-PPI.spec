@@ -12,7 +12,7 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%{pdir}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-authors/id/A/AD/ADAMK/%{pdir}-%{version}.tar.gz
 # Source0-md5:	cece851dda209cb98d3aa1f14c8b47c5
 URL:		http://search.cpan.org/dist/PPI/
 %if %{with tests}
