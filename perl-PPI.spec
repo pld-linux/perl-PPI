@@ -4,8 +4,8 @@
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	PPI
-Summary:	PPI - Parse and manipulate Perl code non-destructively, without using perl itself
-Summary(pl):	PPI - Parsowanie i manipulacja kodem Perla w sposób niedestruktywny, bez u¿ycia perla jako takiego
+Summary:	PPI - parse and manipulate Perl code non-destructively, without using perl itself
+Summary(pl):	PPI - parsowanie i manipulacja kodem Perla w sposób niedestruktywny, bez u¿ycia perla jako takiego
 Name:		perl-%{pdir}
 Version:	0.828
 Release:	1
