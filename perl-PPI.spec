@@ -7,19 +7,16 @@
 Summary:	PPI - parse and manipulate Perl code non-destructively, without using perl itself
 Summary(pl):	PPI - parsowanie i manipulacja kodem Perla w sposób niedestruktywny, bez u¿ycia Perla jako takiego
 Name:		perl-%{pdir}
-Version:	1.002
+Version:	1.103
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/A/AD/ADAMK/%{pdir}-%{version}.tar.gz
-# Source0-md5:	d4826dea07369d8aa0f12740bf05e13f
+# Source0-md5:	d7d93e5fb393beeceb630041a11a2f03
 URL:		http://search.cpan.org/dist/PPI/
 %if %{with tests}
-BuildRequires:	perl-Class-Autouse >= 1.04
-BuildRequires:	perl-Clone >= 0.13
-BuildRequires:	perl-ExtUtils-AutoInstall >= 0.49
-BuildRequires:	perl-File-Slurp >= 9999.04
+BuildRequires:	perl-Clone >= 0.17
 BuildRequires:	perl-IO-stringy >= 2.105
 BuildRequires:	perl-List-MoreUtils >= 0.04
 BuildRequires:	perl-Params-Util >= 0.05
