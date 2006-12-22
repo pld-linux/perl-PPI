@@ -6,26 +6,37 @@
 %define		pdir	PPI
 Summary:	PPI - parse and manipulate Perl code non-destructively, without using perl itself
 Summary(pl):	PPI - parsowanie i manipulacja kodem Perla w sposób niedestruktywny, bez u¿ycia Perla jako takiego
-Name:		perl-%{pdir}
-Version:	1.114
+Name:		perl-PPI
+Version:	1.118
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/A/AD/ADAMK/%{pdir}-%{version}.tar.gz
-# Source0-md5:	7d6b87b13f35ab72aedd0634550ba95a
+# Source0-md5:	189ca5c1fa39c403f65e28967985f4cb
 URL:		http://search.cpan.org/dist/PPI/
 %if %{with tests}
+BuildRequires:	perl(File::Spec) >= 0.84
 BuildRequires:	perl-Clone >= 0.17
-BuildRequires:	perl-IO-stringy >= 2.105
+BuildRequires:	perl-Digest-MD5 >= 2.27
+BuildRequires:	perl-IO-String >= 1.07
 BuildRequires:	perl-List-MoreUtils >= 0.13
-BuildRequires:	perl(List::Util) >= 1.18
-BuildRequires:	perl-Params-Util >= 0.05
+BuildRequires:	perl-Params-Util >= 0.10
+BuildRequires:	perl-Scalar-List-Utils >= 1.18
 BuildRequires:	perl-Storable >= 2.14
 BuildRequires:	perl-Test-ClassAPI >= 1.02
+BuildRequires:	perl-Test-Object >= 0.06
+BuildRequires:	perl-Test-Simple >= 0.47
+%endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-%endif
+Requires:	perl-Clone >= 0.17
+Requires:	perl-Digest-MD5 >= 2.27
+Requires:	perl-IO-String >= 1.07
+Requires:	perl-List-MoreUtils >= 0.13
+Requires:	perl-Params-Util >= 0.10
+Requires:	perl-Scalar-List-Utils >= 1.18
+Requires:	perl-Storable >= 2.14
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
