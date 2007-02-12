@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	PPI
 Summary:	PPI - parse and manipulate Perl code non-destructively, without using perl itself
-Summary(pl):	PPI - parsowanie i manipulacja kodem Perla w sposób niedestruktywny, bez u¿ycia Perla jako takiego
+Summary(pl.UTF-8):   PPI - parsowanie i manipulacja kodem Perla w sposÃ³b niedestruktywny, bez uÅ¼ycia Perla jako takiego
 Name:		perl-PPI
 Version:	1.118
 Release:	1
@@ -54,18 +54,18 @@ upon which the code may depend, and without needing to run an instance
 of Perl alongside or inside the parser (a possible solution for
 Parse::Perl that is investigated from time to time).
 
-%description -l pl
-Technicznie PPI to skrót od Parse::Perl::Isolated. Ze ¶wiadomo¶ci±, ¿e
-pewnego dnia kto¶ mo¿e poprawnie rozwi±zaæ problem gramatyki,
+%description -l pl.UTF-8
+Technicznie PPI to skrÃ³t od Parse::Perl::Isolated. Ze Å›wiadomoÅ›ciÄ…, Å¼e
+pewnego dnia ktoÅ› moÅ¼e poprawnie rozwiÄ…zaÄ‡ problem gramatyki,
 zadecydowano o pozostawieniu wolnej przestrzeni nazw Parse::Perl.
 
 Celem tego parsera nie jest parsowanie kodu Perla, ale parsowanie
-dokumentów Perla. W wiêkszo¶ci przypadków jeden plik jest poprawny w
-obu zastosowaniach. Traktuj±c problem w ten sposób, mo¿na
-przeanalizowaæ jeden plik zawieraj±cy ¼ród³o Perla w od³±czeniu od
-wszystkich innych zasobów, takich jak biblioteki, na których polega
-kod, i bez potrzeby uruchamiania instancji Perla obok lub wewn±trz
-parsera (mo¿liwe rozwi±zanie Parse::Perl badane od czasu do czasu).
+dokumentÃ³w Perla. W wiÄ™kszoÅ›ci przypadkÃ³w jeden plik jest poprawny w
+obu zastosowaniach. TraktujÄ…c problem w ten sposÃ³b, moÅ¼na
+przeanalizowaÄ‡ jeden plik zawierajÄ…cy ÅºrÃ³dÅ‚o Perla w odÅ‚Ä…czeniu od
+wszystkich innych zasobÃ³w, takich jak biblioteki, na ktÃ³rych polega
+kod, i bez potrzeby uruchamiania instancji Perla obok lub wewnÄ…trz
+parsera (moÅ¼liwe rozwiÄ…zanie Parse::Perl badane od czasu do czasu).
 
 %prep
 %setup -q -n %{pdir}-%{version}
