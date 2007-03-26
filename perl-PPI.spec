@@ -8,7 +8,7 @@ Summary:	PPI - parse and manipulate Perl code non-destructively, without using p
 Summary(pl.UTF-8):	PPI - parsowanie i manipulacja kodem Perla w sposób niedestruktywny, bez użycia Perla jako takiego
 Name:		perl-PPI
 Version:	1.118
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
