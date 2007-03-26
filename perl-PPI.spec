@@ -40,6 +40,8 @@ Requires:	perl-Storable >= 2.14
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_noautreq	'perl(PPI::.*)'
+
 %description
 Technically, PPI is short for Parse::Perl::Isolated. In
 acknowledgement that someone may some day come up with a valid
