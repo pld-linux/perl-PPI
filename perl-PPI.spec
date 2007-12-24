@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	PPI
 Summary:	PPI - parse and manipulate Perl code non-destructively, without using perl itself
-Summary(pl.UTF-8):	PPI - parsowanie i manipulacja kodem Perla w sposób niedestruktywny, bez użycia Perla jako takiego
+Summary(pl.UTF-8):	PPI - analiza i manipulacja kodem Perla w sposób niedestruktywny, bez użycia Perla jako takiego
 Name:		perl-PPI
 Version:	1.201
 Release:	1
@@ -61,13 +61,14 @@ Technicznie PPI to skrót od Parse::Perl::Isolated. Ze świadomością, że
 pewnego dnia ktoś może poprawnie rozwiązać problem gramatyki,
 zadecydowano o pozostawieniu wolnej przestrzeni nazw Parse::Perl.
 
-Celem tego parsera nie jest parsowanie kodu Perla, ale parsowanie
+Celem tego analizatora nie jest analiza kodu Perla, ale analiza
 dokumentów Perla. W większości przypadków jeden plik jest poprawny w
 obu zastosowaniach. Traktując problem w ten sposób, można
 przeanalizować jeden plik zawierający źródło Perla w odłączeniu od
 wszystkich innych zasobów, takich jak biblioteki, na których polega
 kod, i bez potrzeby uruchamiania instancji Perla obok lub wewnątrz
-parsera (możliwe rozwiązanie Parse::Perl badane od czasu do czasu).
+analizatora (możliwe rozwiązanie Parse::Perl badane od czasu do
+czasu).
 
 %prep
 %setup -q -n %{pdir}-%{version}
