@@ -7,13 +7,13 @@
 Summary:	PPI - parse and manipulate Perl code non-destructively, without using perl itself
 Summary(pl.UTF-8):	PPI - analiza i manipulacja kodem Perla w sposób niedestruktywny, bez użycia Perla jako takiego
 Name:		perl-PPI
-Version:	1.201
+Version:	1.206
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/A/AD/ADAMK/%{pdir}-%{version}.tar.gz
-# Source0-md5:	dc7c5df06632764e4641151fd15046db
+# Source0-md5:	82b1bd95be146fc742bcfdf067715650
 URL:		http://search.cpan.org/dist/PPI/
 %if %{with tests}
 BuildRequires:	perl(File::Spec) >= 0.84
@@ -22,11 +22,12 @@ BuildRequires:	perl-Digest-MD5 >= 2.27
 BuildRequires:	perl-IO-String >= 1.07
 BuildRequires:	perl-List-MoreUtils >= 0.13
 BuildRequires:	perl-Params-Util >= 0.10
-BuildRequires:	perl-Scalar-List-Utils >= 1.18
+BuildRequires:	perl-Scalar-List-Utils >= 1.20
 BuildRequires:	perl-Storable >= 2.14
 BuildRequires:	perl-Test-ClassAPI >= 1.02
 BuildRequires:	perl-Test-Object >= 0.06
 BuildRequires:	perl-Test-Simple >= 0.47
+BuildRequires:	perl-Test-SubCalls
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -35,7 +36,7 @@ Requires:	perl-Digest-MD5 >= 2.27
 Requires:	perl-IO-String >= 1.07
 Requires:	perl-List-MoreUtils >= 0.13
 Requires:	perl-Params-Util >= 0.10
-Requires:	perl-Scalar-List-Utils >= 1.18
+Requires:	perl-Scalar-List-Utils >= 1.20
 Requires:	perl-Storable >= 2.14
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
