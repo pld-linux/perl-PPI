@@ -19,12 +19,14 @@ URL:		http://search.cpan.org/dist/PPI/
 BuildRequires:	perl(File::Spec) >= 0.84
 BuildRequires:	perl-Clone >= 0.17
 BuildRequires:	perl-Digest-MD5 >= 2.27
+BuildRequires:	perl-File-Remove
 BuildRequires:	perl-IO-String >= 1.07
 BuildRequires:	perl-List-MoreUtils >= 0.13
 BuildRequires:	perl-Params-Util >= 0.10
 BuildRequires:	perl-Scalar-List-Utils >= 1.20
 BuildRequires:	perl-Storable >= 2.14
 BuildRequires:	perl-Test-ClassAPI >= 1.02
+BuildRequires:	perl-Test-NoWarnings
 BuildRequires:	perl-Test-Object >= 0.06
 BuildRequires:	perl-Test-Simple >= 0.47
 BuildRequires:	perl-Test-SubCalls
