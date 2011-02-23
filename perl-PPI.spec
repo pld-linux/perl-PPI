@@ -17,29 +17,31 @@ Source0:	http://www.cpan.org/modules/by-authors/id/A/AD/ADAMK/%{pdir}-%{version}
 URL:		http://search.cpan.org/dist/PPI/
 %if %{with tests}
 BuildRequires:	perl(File::Spec) >= 0.84
-BuildRequires:	perl-Clone >= 0.17
-BuildRequires:	perl-Digest-MD5 >= 2.27
-BuildRequires:	perl-File-Remove
+BuildRequires:	perl-Class-Inspector >= 1.22
+BuildRequires:	perl-Clone >= 0.30
+BuildRequires:	perl-Digest-MD5 >= 2.35
+BuildRequires:	perl-File-Remove >= 1.42
 BuildRequires:	perl-IO-String >= 1.07
-BuildRequires:	perl-List-MoreUtils >= 0.13
-BuildRequires:	perl-Params-Util >= 0.10
+BuildRequires:	perl-List-MoreUtils >= 0.16
+BuildRequires:	perl-Params-Util >= 1.00
 BuildRequires:	perl-Scalar-List-Utils >= 1.20
-BuildRequires:	perl-Storable >= 2.14
+BuildRequires:	perl-Storable >= 2.17
+BuildRequires:	perl-Task-Weaken
 BuildRequires:	perl-Test-ClassAPI >= 1.02
-BuildRequires:	perl-Test-NoWarnings
-BuildRequires:	perl-Test-Object >= 0.06
-BuildRequires:	perl-Test-Simple >= 0.47
-BuildRequires:	perl-Test-SubCalls
+BuildRequires:	perl-Test-NoWarnings >= 0.084
+BuildRequires:	perl-Test-Object >= 0.07
+BuildRequires:	perl-Test-Simple >= 0.86
+BuildRequires:	perl-Test-SubCalls >= 1.07
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-Requires:	perl-Clone >= 0.17
-Requires:	perl-Digest-MD5 >= 2.27
+Requires:	perl-Clone >= 0.30
+Requires:	perl-Digest-MD5 >= 2.35
 Requires:	perl-IO-String >= 1.07
-Requires:	perl-List-MoreUtils >= 0.13
-Requires:	perl-Params-Util >= 0.10
+Requires:	perl-List-MoreUtils >= 0.16
+Requires:	perl-Params-Util >= 1.00
 Requires:	perl-Scalar-List-Utils >= 1.20
-Requires:	perl-Storable >= 2.14
+Requires:	perl-Storable >= 2.17
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -99,4 +101,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorlib}/PPI.pm
 %{perl_vendorlib}/PPI
-%{_mandir}/man3/*
+%{_mandir}/man3/PPI*.3pm*
