@@ -89,6 +89,7 @@ czasu).
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{perl_vendorlib}/PPIx
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -101,4 +102,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorlib}/PPI.pm
 %{perl_vendorlib}/PPI
+%dir %{perl_vendorlib}/PPIx
 %{_mandir}/man3/PPI*.3pm*
