@@ -8,7 +8,7 @@ Summary:	PPI - parse and manipulate Perl code non-destructively, without using p
 Summary(pl.UTF-8):	PPI - analiza i manipulacja kodem Perla w sposób niedestruktywny, bez użycia Perla jako takiego
 Name:		perl-PPI
 Version:	1.215
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -24,7 +24,6 @@ BuildRequires:	perl-File-Remove >= 1.42
 BuildRequires:	perl-IO-String >= 1.07
 BuildRequires:	perl-List-MoreUtils >= 0.16
 BuildRequires:	perl-Params-Util >= 1.00
-BuildRequires:	perl-Scalar-List-Utils >= 1.20
 BuildRequires:	perl-Storable >= 2.17
 BuildRequires:	perl-Task-Weaken
 BuildRequires:	perl-Test-ClassAPI >= 1.02
@@ -40,7 +39,6 @@ Requires:	perl-Digest-MD5 >= 2.35
 Requires:	perl-IO-String >= 1.07
 Requires:	perl-List-MoreUtils >= 0.16
 Requires:	perl-Params-Util >= 1.00
-Requires:	perl-Scalar-List-Utils >= 1.20
 Requires:	perl-Storable >= 2.17
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
