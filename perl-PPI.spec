@@ -7,13 +7,13 @@
 Summary:	PPI - parse and manipulate Perl code non-destructively, without using perl itself
 Summary(pl.UTF-8):	PPI - analiza i manipulacja kodem Perla w sposób niedestruktywny, bez użycia Perla jako takiego
 Name:		perl-PPI
-Version:	1.215
-Release:	2
+Version:	1.220
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/A/AD/ADAMK/%{pdir}-%{version}.tar.gz
-# Source0-md5:	7b58542e39e8a162d2f6866d7c059bae
+Source0:	http://www.cpan.org/modules/by-module/PPI/%{pdir}-%{version}.tar.gz
+# Source0-md5:	52224156144862b79b91fb53191ae47f
 URL:		http://search.cpan.org/dist/PPI/
 %if %{with tests}
 BuildRequires:	perl(File::Spec) >= 0.84
@@ -24,6 +24,7 @@ BuildRequires:	perl-File-Remove >= 1.42
 BuildRequires:	perl-IO-String >= 1.07
 BuildRequires:	perl-List-MoreUtils >= 0.16
 BuildRequires:	perl-Params-Util >= 1.00
+BuildRequires:	perl-Scalar-List-Utils >= 1.20
 BuildRequires:	perl-Storable >= 2.17
 BuildRequires:	perl-Task-Weaken
 BuildRequires:	perl-Test-ClassAPI >= 1.02
@@ -39,6 +40,7 @@ Requires:	perl-Digest-MD5 >= 2.35
 Requires:	perl-IO-String >= 1.07
 Requires:	perl-List-MoreUtils >= 0.16
 Requires:	perl-Params-Util >= 1.00
+Requires:	perl-Scalar-List-Utils >= 1.20
 Requires:	perl-Storable >= 2.17
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -97,8 +99,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README
+%doc Changes README.md
 %{perl_vendorlib}/PPI.pm
 %{perl_vendorlib}/PPI
 %dir %{perl_vendorlib}/PPIx
-%{_mandir}/man3/PPI*.3pm*
+%{_mandir}/man3/PPI.3pm*
+%{_mandir}/man3/PPI::*.3pm*
