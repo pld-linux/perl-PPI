@@ -7,13 +7,13 @@
 Summary:	PPI - parse and manipulate Perl code non-destructively, without using perl itself
 Summary(pl.UTF-8):	PPI - analiza i manipulacja kodem Perla w sposób niedestruktywny, bez użycia Perla jako takiego
 Name:		perl-PPI
-Version:	1.220
+Version:	1.224
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/PPI/%{pdir}-%{version}.tar.gz
-# Source0-md5:	52224156144862b79b91fb53191ae47f
+# Source0-md5:	527b70bb15263c4f3907d6d4b5be6dba
 URL:		http://search.cpan.org/dist/PPI/
 %if %{with tests}
 BuildRequires:	perl(File::Spec) >= 0.84
