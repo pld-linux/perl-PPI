@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	PPI
 Summary:	PPI - parse and manipulate Perl code non-destructively, without using perl itself
@@ -11,9 +11,9 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	https://www.cpan.org/modules/by-module/PPI/%{pdir}-%{version}.tar.gz
+Source0:	https://www.cpan.org/modules/by-module/PPI/MITHALDU/%{pdir}-%{version}.tar.gz
 # Source0-md5:	0713d4677fb9f8b9a93a9d6b75bb5615
-URL:		https://search.cpan.org/dist/PPI/
+URL:		https://metacpan.org/dist/PPI
 %if %{with tests}
 BuildRequires:	perl(File::Spec) >= 0.84
 BuildRequires:	perl-Class-Inspector >= 1.22
@@ -34,6 +34,7 @@ BuildRequires:	perl-Test-SubCalls >= 1.07
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 Requires:	perl-Clone >= 0.30
 Requires:	perl-Digest-MD5 >= 2.35
 Requires:	perl-IO-String >= 1.07
@@ -84,7 +85,9 @@ czasu).
 
 %{__make}
 
-%{?with_tests:%{__make} test}
+%if %{with tests}
+%{__make} test
+%endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
