@@ -14,6 +14,7 @@ Group:		Development/Languages/Perl
 Source0:	https://www.cpan.org/modules/by-module/PPI/MITHALDU/%{pdir}-%{version}.tar.gz
 # Source0-md5:	0713d4677fb9f8b9a93a9d6b75bb5615
 URL:		https://metacpan.org/dist/PPI
+BuildRequires:	perl-ExtUtils-MakeMaker
 %if %{with tests}
 BuildRequires:	perl(File::Spec) >= 0.84
 BuildRequires:	perl-Class-Inspector >= 1.22
@@ -23,14 +24,17 @@ BuildRequires:	perl-File-Remove >= 1.42
 BuildRequires:	perl-IO-String >= 1.07
 BuildRequires:	perl-List-MoreUtils >= 0.16
 BuildRequires:	perl-Params-Util >= 1.00
-BuildRequires:	perl-Scalar-List-Utils >= 1.20
+BuildRequires:	perl-Safe-Isa
+BuildRequires:	perl-Scalar-List-Utils >= 1.33
 BuildRequires:	perl-Storable >= 2.17
 BuildRequires:	perl-Task-Weaken
 BuildRequires:	perl-Test-ClassAPI >= 1.02
 BuildRequires:	perl-Test-NoWarnings >= 0.084
 BuildRequires:	perl-Test-Object >= 0.07
-BuildRequires:	perl-Test-Simple >= 0.86
+BuildRequires:	perl-Test-Simple >= 0.96
 BuildRequires:	perl-Test-SubCalls >= 1.07
+BuildRequires:	perl-YAML-PP
+BuildRequires:	perl-version >= 0.77
 %endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -38,14 +42,13 @@ BuildRequires:	rpmbuild(macros) >= 1.745
 Requires:	perl-Clone >= 0.30
 Requires:	perl-Digest-MD5 >= 2.35
 Requires:	perl-IO-String >= 1.07
-Requires:	perl-List-MoreUtils >= 0.16
 Requires:	perl-Params-Util >= 1.00
-Requires:	perl-Scalar-List-Utils >= 1.20
+Requires:	perl-Scalar-List-Utils >= 1.33
 Requires:	perl-Storable >= 2.17
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautreq	'perl(PPI::.*)'
+%define		_noautreq_perl	PPI::.*
 
 %description
 Technically, PPI is short for Parse::Perl::Isolated. In
